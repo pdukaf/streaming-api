@@ -5,7 +5,10 @@
 
 ## Rails version
 	6.0.2
-	
+
+## Database
+	Postgresql 
+
 ## Project Setup Instruction
 1. Clone repo from `https://github.com/pdukaf/streaming-api`
 2. Run `bundle install` to install packages and dependencies.
