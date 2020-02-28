@@ -8,9 +8,10 @@
 #  type       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  season_id  :integer
 #
 require 'rails_helper'
 
 RSpec.describe Movie, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
 end

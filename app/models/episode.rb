@@ -8,6 +8,8 @@
 #  type       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  season_id  :integer
 #
 class Episode < Movie
+	belongs_to :season
 end

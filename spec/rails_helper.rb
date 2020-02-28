@@ -34,7 +34,7 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 
-Should::Matchers.configure do |config|
+Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
     with.library :rails
@@ -49,16 +49,16 @@ RSpec.configure do |config|
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-  config.before(:suit) do
-    DatabaseCleaner.clean_with(:truncation)
-    DatabaseCleaner.strategy= :transaction
-  end
+  # config.before(:suit) do
+  #   DatabaseCleaner.clean_with(:truncation)
+  #   DatabaseCleaner.strategy= :transaction
+  # end
 
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
-  end
+  # config.around(:each) do |example|
+  #   DatabaseCleaner.cleaning do
+  #     example.run
+  #   end
+  # end
 
   config.use_transactional_fixtures = true
 
